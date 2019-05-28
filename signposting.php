@@ -48,7 +48,7 @@ function hw_signpost() {
 		'exclude_from_search' => false,
 		'capability_type' => 'post',
 		'show_ui' => true,
-		'menu_position' => 3,
+		'menu_position' => 4,
 		'show_in_nav_menus' => false,
 		'menu_icon' => 'dashicons-flag',
 		'rewrite' => array('slug' => 'signposts'),
