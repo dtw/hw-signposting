@@ -89,7 +89,7 @@ function signposts_categories_init() {
 			'show_in_quick_edit' => true,
 			'show_admin_column' => true,
 			'hierarchical' => true,
-			
+
 		)
 	);
 
