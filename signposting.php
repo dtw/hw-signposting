@@ -99,12 +99,26 @@ function signposts_categories_init() {
 add_action( 'init', 'signposts_categories_init' );
 
 
+// adds the signposting shortcodes to a new signpost automatically
 
+function signposting_editor_content( $content, $post ) {
 
+  $post_type = $post->post_type;
+  if ( $post_type = 'signposts' ) {
+    $content = '[signpost_phone][/signpost_phone]
 
+    [signpost_email][/signpost_email]
 
+    [signpost_website][/signpost_website]
 
+    [signpost_address][/signpost_address]
 
+    [signpost_location][/signpost_location]';
+  }
+  return $content;
+}
+
+add_filter( 'default_content', 'signposting_editor_content', 10, 2 );
 
 function my_remove_wp_seo_meta_box() {
 	remove_meta_box('wpseo_meta', 'signposts', 'normal');
