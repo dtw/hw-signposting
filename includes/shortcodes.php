@@ -8,13 +8,15 @@ function signposts_list_categories_with_featured_images() {
     foreach ( $terms as $term ) {
       $the_term_icon = get_term_meta( $term->term_id, 'icon', true );
       $stuff = $stuff .
-      '<div class="col-md-3 signpost_container">
-        <a class="' . $term->slug . '" href="' . get_term_link( $term ) . '">
-          <img class="img_signpost_category" width="150px" src="' . $the_term_icon . '" alt="' . $term->name . '" />
-        </a>
-        <p>
-          <a class="' . $term->slug . '" href="' . get_term_link( $term ) . '">' . $term->name . '</a>
-        </p>
+      '<div class="col-md-3">
+        <div class="signpost_container">
+          <a class="' . $term->slug . '" href="' . get_term_link( $term ) . '">
+            <img class="img_signpost_category" width="150px" src="' . $the_term_icon . '" alt="' . $term->name . '" />
+          </a>
+          <p>
+            <a class="' . $term->slug . '" href="' . get_term_link( $term ) . '">' . $term->name . '</a>
+          </p>
+        </div>
       </div>';
     }
     $stuff = $stuff . '</div>';
