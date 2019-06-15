@@ -10,17 +10,15 @@ function signposts_list_categories_with_featured_images() {
       $stuff = $stuff .
       '<div class="col-md-3">
         <div class="signpost-container">
-          <img class="img-signpost-category" src="' . $the_term_icon . '" alt="' . $term->name . '" />
-          <div class="signpost-details">
-            <p>
-              <a class="signpost-title ' . $term->slug . '" href="' . get_term_link( $term ) . '">' . $term->name . '</a>
-            </p>
+          <a class="' . $term->slug . '" href="' . get_term_link( $term ) . '">
+            <img class="img-signpost-category" src="' . $the_term_icon . '" alt="' . $term->name . '" />
+          </a>
+          <a class="signpost-details ' . $term->slug . '" href="' . get_term_link( $term ) . '">
+            <p>' . $term->name . '</p>
             <div class="hover-content">
-              <p>'
-                . $term->description .
-              '</p>
+              <p>' . $term->description . '</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>';
     }
