@@ -1,6 +1,6 @@
 <?php // signposts shortcode - lists categories for signposts
 
-function signposts_list-categories_with_featured_images() {
+function signposts_list_categories_with_featured_images() {
 // List LOCAL SERVICES with link to each
   $terms = get_terms( 'signpost_categories' );
   if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
