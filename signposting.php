@@ -104,7 +104,7 @@ add_action( 'init', 'signposts_categories_init' );
 function signposting_editor_content( $content, $post ) {
 
   $post_type = $post->post_type;
-  if ( $post_type = 'signposts' ) {
+  if ( $post_type == 'signposts' ) {
     $content = '[signpost_phone][/signpost_phone]
 
     [signpost_email][/signpost_email]
