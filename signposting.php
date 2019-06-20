@@ -106,15 +106,15 @@ function signposting_editor_content( $content, $post ) {
   $post_type = $post->post_type;
   if ( $post_type == 'signposts' ) {
     $content .= '
-    [signpost_phone][/signpost_phone]
+[signpost_phone][/signpost_phone]
 
-    [signpost_email][/signpost_email]
+[signpost_email][/signpost_email]
 
-    [signpost_website][/signpost_website]
+[signpost_website][/signpost_website]
 
-    [signpost_address][/signpost_address]
+[signpost_address][/signpost_address]
 
-    [signpost_location][/signpost_location]';
+[signpost_location][/signpost_location]';
   }
   return $content;
 }
