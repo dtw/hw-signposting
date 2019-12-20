@@ -27,6 +27,6 @@ function signposts_list_categories_with_featured_images() {
 return $stuff;
 }
 
-add_shortcode('signposts', 'signposts_list_categories_with_featured_images');
+add_shortcode('signposts_menu', 'signposts_list_categories_with_featured_images');
 
 ?>
