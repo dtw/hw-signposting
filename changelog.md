@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2019-12-20
+### Changed
+- Rename signposts shortcode
+
 ## [1.2.0] - 2019-06-15
 ### Added
 - hover effects on signposts shortcodes
