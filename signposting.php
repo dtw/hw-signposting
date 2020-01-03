@@ -126,6 +126,15 @@ function modified_column_display( $column_name, $post_id ) {
 	}
 }
 add_action( 'manage_signposts_posts_custom_column', 'modified_column_display', 10, 2 );
+
+// Make the Modified column sortable
+
+function modified_column_register_sortable( $columns ) {
+	$columns['Modified'] = 'modified';
+	return $columns;
+}
+add_filter( 'manage_edit-signposts_sortable_columns', 'modified_column_register_sortable' );
+
 // adds the signposting shortcodes to a new signpost automatically
 
 function signposting_editor_content( $content, $post ) {
