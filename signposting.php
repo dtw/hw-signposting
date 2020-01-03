@@ -98,6 +98,14 @@ function signposts_categories_init() {
 }
 add_action( 'init', 'signposts_categories_init' );
 
+// Register Modified Date and Last Author Column for signposts post_type
+function modified_column_register( $columns ) {
+  // ideally like to remove the thumb column
+  $columns['Modified'] = __( 'Modified Date', 'hw_signposting_show_modified_date_in_admin_lists' );
+  $columns['LastAuthor'] = __( 'Last Modified by', 'hw_signposting_show_modified_date_in_admin_lists' );
+	return $columns;
+}
+add_filter( 'manage_signposts_posts_columns', 'modified_column_register' );
 
 // adds the signposting shortcodes to a new signpost automatically
 
