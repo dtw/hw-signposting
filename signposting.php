@@ -120,7 +120,7 @@ function modified_column_display( $column_name, $post_id ) {
   case 'LastAuthor':
   	global $post;
          	echo '<p class="mod-author">';
-          echo get_the_modified_author();
+          echo get_the_modified_author() . '<a href="' . add_query_arg( 'author' , get_the_author_meta('ID')) . '">ID</a>';
   		echo '</p>';
 		break; // end all case breaks
 	}
