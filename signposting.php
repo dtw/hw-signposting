@@ -107,6 +107,25 @@ function modified_column_register( $columns ) {
 }
 add_filter( 'manage_signposts_posts_columns', 'modified_column_register' );
 
+// Populate the two columns
+function modified_column_display( $column_name, $post_id ) {
+	switch ( $column_name ) {
+	case 'Modified':
+		global $post;
+	       	echo '<p class="mod-date">';
+          echo '<span style="text-decoration: dotted underline;" title="'.get_the_modified_date().' '.get_the_modified_time().'">';
+	       	echo get_the_modified_date($d='Y/m/d').'</span>';
+			echo '</p>';
+    break; // end all case breaks
+  case 'LastAuthor':
+  	global $post;
+         	echo '<p class="mod-author">';
+          echo get_the_modified_author();
+  		echo '</p>';
+		break; // end all case breaks
+	}
+}
+add_action( 'manage_signposts_posts_custom_column', 'modified_column_display', 10, 2 );
 // adds the signposting shortcodes to a new signpost automatically
 
 function signposting_editor_content( $content, $post ) {
