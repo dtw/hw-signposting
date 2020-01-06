@@ -6,7 +6,7 @@
 
 * Description: Creates a custom post type for signposting
 
-* Version: 1.0.0
+* Version: 1.3
 
 * Author: Phil Thiselton & Jason King
 

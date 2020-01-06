@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3] - 2020-01-6
+### Added
+- show modified author and date in admin list view
+
 ## [1.2.1] - 2019-12-20
 ### Changed
 - Rename signposts shortcode
