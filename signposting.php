@@ -2,17 +2,17 @@
 
 /*
 
-* Plugin Name: Signposting
+* Plugin Name: Healthwatch Signposting
 
 * Description: Creates a custom post type for signposting
 
 * Version: 1.0.0
 
-* Author: Jason King
+* Author: Phil Thiselton & Jason King
 
 * License: GPL2
 
-/*  Copyright 2018 Jason King (email : jason@kingjason.co.uk)
+/*  Copyright 2020 Jason King (email : jason@kingjason.co.uk)
 
 */
 
