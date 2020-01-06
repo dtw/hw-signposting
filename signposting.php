@@ -93,11 +93,9 @@ add_action( 'init', 'signposts_categories_init' );
 
 /**
 This code modified from "Show modified Date in admin lists" plugin
-Plugin URI: http://apasionados.es
-Description: Shows a new, sortable, column with the modified date in the lists of pages and posts in the WordPress admin panel. It also shows the username that did the last update.
+http://apasionados.es
 Version: 1.1
-Author: Apasionados.es
-Author URI: http://apasionados.es
+Apasionados.es
 License: GPL2
 */
 
