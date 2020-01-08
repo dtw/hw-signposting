@@ -109,11 +109,26 @@ add_filter( 'manage_signposts_posts_columns', 'modified_column_register' );
 
 // Populate the two columns
 function modified_column_display( $column_name, $post_id ) {
-	switch ( $column_name ) {
-	// show modified date (with timestamp on hover)
+  $modified_date_time = new DateTime(get_the_modified_date());
+  switch ( $column_name ) {
   case 'Modified':
 		global $post;
 	       	echo '<p class="mod-date">';
+          // if last modification was over a year ago colour it red
+          if(date_format($modified_date_time->modify('+1 year'),'Y-m-d') < current_time('Y-m-d')) {
+            echo '<span style="color:red;">';
+            if (get_the_modified_date() == get_the_date()) {
+              // if the post has never been modified
+              echo 'Never</span><br>';
+            } else {
+              // otherwise show a human readable time since edit
+              echo human_time_diff( strtotime(get_the_modified_date()), current_time( 'timestamp' ) ) . ' ago</span><br>';
+            }
+          } else {
+            // last mod not more than a year ago so show a human readable time since edit
+            echo human_time_diff( strtotime(get_the_modified_date()), current_time( 'timestamp' ) ) . ' ago<br>';
+          }
+          // show modified date (with timestamp on hover)
           echo '<span style="text-decoration: dotted underline;" title="'.get_the_modified_date().' '.get_the_modified_time().'">';
 	       	echo get_the_modified_date($d='Y/m/d').'</span>';
 			echo '</p>';
