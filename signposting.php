@@ -192,4 +192,17 @@ add_filter( 'addtoany_sharing_disabled', 'addtoany_disable_sharing_on_my_custom_
 include("includes/taxonomy-icons.php");
 include("includes/shortcodes.php");
 
+/**
+ * Disable the "signposts" custom post type feed
+ *
+ * @since 1.0.0
+ * @param object $query
+ */
+function disable_signposts_feed( $query ) {
+    if ( $query->is_feed() && in_array( 'signposts', (array) $query->get( 'post_type' ) ) ) {
+        die( 'Feed disabled' );
+    }
+}
+add_action( 'pre_get_posts', 'disable_signposts_feed' );
+
 ?>
