@@ -6,7 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.3.0] - 2020-01-6
+## [1.4.0] - 2020-01-06
+### Added
+- add visual hints for time since last modification in admin screen
+- add code to disable rss feed on signposts posts
+
+## [1.3.0] - 2020-01-06
 ### Added
 - show modified author and date in admin list view
 
