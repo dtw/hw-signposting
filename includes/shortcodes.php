@@ -10,7 +10,7 @@ function signposts_list_categories_with_featured_images() {
       $output = $output .
       '<div class="col-md-3 col-sm-4 col-xs-6">
         <div class="signpost-container">
-          <a class="' . $term->slug . '" href="' . get_term_link( $term ) . '">
+          <a class="img-anchor ' . $term->slug . '" href="' . get_term_link( $term ) . '">
             <img class="img-signpost-category" src="' . $the_term_icon . '" alt="' . $term->name . '" />
           </a>
           <a class="signpost-details ' . $term->slug . '" href="' . get_term_link( $term ) . '">
