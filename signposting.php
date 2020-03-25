@@ -4,7 +4,7 @@
 
 * Plugin Name: Healthwatch Signposting
 
-* Description: Creates a custom post type for signposting
+* Description: Implements a custom post type for signposting on Healthwatch websites. <strong>DO NOT DELETE !</strong>
 
 * Version: 1.4.1
 
