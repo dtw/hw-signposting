@@ -200,7 +200,7 @@ include("includes/shortcodes.php");
  */
 function disable_signposts_feed( $query ) {
     if ( $query->is_feed() && in_array( 'signposts', (array) $query->get( 'post_type' ) ) ) {
-        die( 'Feed disabled' );
+        die( 'Signpost - feed disabled' );
     }
 }
 add_action( 'pre_get_posts', 'disable_signposts_feed' );
