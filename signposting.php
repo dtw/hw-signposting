@@ -27,8 +27,8 @@ defined( 'ABSPATH' ) or die( 'Sorry, nothing to see here.' );
 /* 1. Create Signpost CUSTOM POST TYPE
 -------------------------------------------------- */
 
-add_action( 'init', 'hw_signpost' );
-function hw_signpost() {
+add_action( 'init', 'hw_signpost_create_post_type' );
+function hw_signpost_create_post_type() {
   register_post_type( 'signposts',
     array(
 
@@ -65,7 +65,7 @@ function hw_signpost() {
 		- signpost categories
 ------------------------------------------------------------------ */
 
-function signposts_categories_init() {
+function hw_signpost_categories_init() {
 
 	register_taxonomy(
 		'signpost_categories',
@@ -86,7 +86,7 @@ function signposts_categories_init() {
 
 
 }
-add_action( 'init', 'signposts_categories_init' );
+add_action( 'init', 'hw_signpost_categories_init' );
 
 /* 3. Add Admin COLUMNS
 ------------------------------------------------------------------ */
@@ -100,15 +100,15 @@ License: GPL2
 */
 
 // Register Modified Date and Last Author Column for signposts post_type
-function modified_column_register( $columns ) {
+function hw_signpost_modified_column_register( $columns ) {
   $columns['LastAuthor'] = __( 'Last Modified by', 'hw_signposting_show_modified_date_in_admin_lists' );
   $columns['Modified'] = __( 'Modified Date', 'hw_signposting_show_modified_date_in_admin_lists' );
 	return $columns;
 }
-add_filter( 'manage_signposts_posts_columns', 'modified_column_register' );
+add_filter( 'manage_signposts_posts_columns', 'hw_signpost_modified_column_register' );
 
 // Populate the two columns
-function modified_column_display( $column_name, $post_id ) {
+function hw_signpost_modified_column_display( $column_name, $post_id ) {
   $modified_date_time = new DateTime(get_the_modified_date());
   switch ( $column_name ) {
   case 'Modified':
@@ -142,19 +142,19 @@ function modified_column_display( $column_name, $post_id ) {
 		break;
 	}
 }
-add_action( 'manage_signposts_posts_custom_column', 'modified_column_display', 10, 2 );
+add_action( 'manage_signposts_posts_custom_column', 'hw_signpost_modified_column_display', 10, 2 );
 
 // Make the Modified column sortable
-function modified_column_register_sortable( $columns ) {
+function hw_signpost_modified_column_register_sortable( $columns ) {
 	$columns['Modified'] = 'modified';
 	return $columns;
 }
-add_filter( 'manage_edit-signposts_sortable_columns', 'modified_column_register_sortable' );
+add_filter( 'manage_edit-signposts_sortable_columns', 'hw_signpost_modified_column_register_sortable' );
 
 /* 4. Add the signposting shortcodes to a new signpost automatically
 ------------------------------------------------------------------ */
 
-function signposting_editor_content( $content, $post ) {
+function hw_signpost_signposting_editor_content( $content, $post ) {
 
   $post_type = $post->post_type;
   if ( $post_type == 'signposts' ) {
@@ -172,15 +172,15 @@ function signposting_editor_content( $content, $post ) {
   return $content;
 }
 
-add_filter( 'default_content', 'signposting_editor_content', 10, 2 );
+add_filter( 'default_content', 'hw_signpost_signposting_editor_content', 10, 2 );
 
 /* 5. Other signposts post type admin
 ------------------------------------------------------------------ */
 
-function my_remove_wp_seo_meta_box() {
+function hw_signpost_remove_wp_seo_meta_box() {
 	remove_meta_box('wpseo_meta', 'signposts', 'normal');
 }
-add_action('add_meta_boxes', 'my_remove_wp_seo_meta_box', 100);
+add_action('add_meta_boxes', 'hw_signpost_remove_wp_seo_meta_box', 100);
 
 function addtoany_disable_sharing_on_my_custom_post_type() {
     if ( 'signposts' == get_post_type() ) {
@@ -198,11 +198,11 @@ include("includes/shortcodes.php");
  * @since 1.0.0
  * @param object $query
  */
-function disable_signposts_feed( $query ) {
+function hw_signpost_disable_signposts_feed( $query ) {
     if ( $query->is_feed() && in_array( 'signposts', (array) $query->get( 'post_type' ) ) ) {
         die( 'Signpost - feed disabled' );
     }
 }
-add_action( 'pre_get_posts', 'disable_signposts_feed' );
+add_action( 'pre_get_posts', 'hw_signpost_disable_signposts_feed' );
 
 ?>
