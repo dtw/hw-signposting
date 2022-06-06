@@ -46,7 +46,12 @@ function hw_signpost_create_post_type() {
 		'public' => true,
 		'has_archive' => true,
 		'exclude_from_search' => false,
-		'capability_type' => 'post',
+    'capabilities' => array (
+      'manage_terms' => 'activate_plugins',
+      'edit_terms' => 'activate_plugins',
+      'delete_terms' => 'activate_plugins',
+      'assign_terms' => 'post',
+    ),
 		'show_ui' => true,
 		'menu_position' => 4,
 		'show_in_nav_menus' => false,
