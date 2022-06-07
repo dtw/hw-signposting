@@ -79,7 +79,12 @@ function hw_signpost_categories_init() {
 			'show_in_quick_edit' => true,
 			'show_admin_column' => true,
 			'hierarchical' => true,
-
+      'capabilities' => array (
+        'manage_terms' => 'activate_plugins',
+        'edit_terms' => 'activate_plugins',
+        'delete_terms' => 'activate_plugins',
+        'assign_terms' => 'edit_posts',
+      ),
 		)
 	);
 
