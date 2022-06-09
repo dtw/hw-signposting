@@ -6,7 +6,7 @@
 
 * Description: Implements a custom post type for signposting on Healthwatch websites. <strong>DO NOT DELETE !</strong>
 
-* Version: 1.4.3
+* Version: 1.5
 
 * Author: Phil Thiselton & Jason King
 
