@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5] - 2022-06-09
+## Changed
+- The Great Function Rename 2022 (renamed functions in line with plugin name)
+- updated capabilities on taxonomy
+
 ## [1.4.3] - 2021-09-08
 ## Changed
 - updated die message
