@@ -210,4 +210,12 @@ function hw_signpost_disable_signposts_feed( $query ) {
 }
 add_action( 'pre_get_posts', 'hw_signpost_disable_signposts_feed' );
 
+// Add CUSTOM CSS to the SHORTCODES
+
+function scaffold_shortcode_css() {
+  wp_enqueue_style('signposting_shortcode_styles' , plugins_url().'/hw-signposting/css/style.css');
+}
+
+add_action('wp_enqueue_scripts', 'scaffold_shortcode_css');
+
 ?>

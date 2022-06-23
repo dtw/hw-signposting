@@ -1,0 +1,61 @@
+/* CSS for changes to plugin */
+
+.media.signpost {
+  padding: 0px;
+  border: 0px;
+  margin-bottom: 1.5rem;
+}
+
+.media.signpost-email .media-body a,
+.media.signpost-website .media-body a {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever
+  word-break: break-all;*/
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.media.callout-signpost {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #F7F7F7;
+}
+
+.media.callout-signpost .media-body a,
+.signposts a {
+  color: var(--hw-hyperlink);
+}
+
+.media.callout-signpost .media-body a:hover,
+.media.callout-signpost .media-body a:focus,
+.signposts a:hover,
+.signposts a:focus {
+	color: var(--hw-pale-grey);
+	background-color:	var(--hw-hyperlink);
+	outline: 3px solid var(--hw-hyperlink);
+}
+
+.media.signpost .media-body p {
+  margin-bottom: 0px;
+}
+
+.media.signpost .media-left {
+  padding-right: 0px;
+}
+
+.media.signpost .media-body {
+  font-size:16px;
+}
+
+.edit-signpost {
+  text-align:right;
+}
