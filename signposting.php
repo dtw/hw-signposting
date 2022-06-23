@@ -16,13 +16,7 @@
 
 */
 
-
-
 defined( 'ABSPATH' ) or die( 'Sorry, nothing to see here.' );
-
-
-
-
 
 /* 1. Create Signpost CUSTOM POST TYPE
 -------------------------------------------------- */
