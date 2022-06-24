@@ -1,18 +1,13 @@
 <?php
 
 /*
+Plugin Name: Healthwatch Signposting
+Version: 1.5
+Description: Implements a custom post type for signposting on Healthwatch websites. <strong>DO NOT DELETE !</strong>
+Author: Phil Thiselton & Jason King
+License: GPL2
 
-* Plugin Name: Healthwatch Signposting
-
-* Description: Implements a custom post type for signposting on Healthwatch websites. <strong>DO NOT DELETE !</strong>
-
-* Version: 1.5
-
-* Author: Phil Thiselton & Jason King
-
-* License: GPL2
-
-/*  Copyright 2020 Jason King (email : jason@kingjason.co.uk)
+Copyright 2020 Jason King (email : jason@kingjason.co.uk)
 
 */
 
