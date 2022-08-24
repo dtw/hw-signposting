@@ -6,13 +6,13 @@ function hw_signpost_signposts_list_categories_with_featured_images() {
   if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
     $output = '<!-- start container --><div id="signposts-selector" class="row">';
     foreach ( $terms as $term ) {
-      $the_term_icon = get_term_meta( $term->term_id, 'icon', true );
+      $term_icon = get_term_meta( $term->term_id, 'icon', true );
       $output = $output .
       '<div class="col-md-3 col-sm-4 col-xs-6">
         <div class="signpost-container">
-          <a class="img-anchor ' . $term->slug . '" href="' . get_term_link( $term ) . '" aria-hidden="true">
-            <img class="img-signpost-category" src="' . $the_term_icon . '" alt="' . $term->name . '" />
-          </a>
+          <a class="img-anchor ' . $term->slug . '" href="' . get_term_link( $term ) . '" aria-hidden="true">'
+            . wp_get_attachment_image( $term_icon, 'full', false, array( 'class' => 'img-signpost-category', 'alt' => $term->name ) ) .
+          '</a>
           <a class="signpost-details ' . $term->slug . '" href="' . get_term_link( $term ) . '">
             <p>' . $term->name . '</p>
             <div class="hover-content">
