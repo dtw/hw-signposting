@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Healthwatch Signposting
-Version: 1.5
+Version: 1.5.2
 Description: Implements a custom post type for signposting on Healthwatch websites. <strong>DO NOT DELETE !</strong>
 Author: Phil Thiselton & Jason King
 License: GPL2
