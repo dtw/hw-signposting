@@ -86,7 +86,7 @@ add_shortcode( 'signpost_location', 'hw_signpost_shortcode_signpost_location_obj
 
 function hw_signpost_shortcode_signpost_website_object( $atts, $content = null ) {
 	$a = shortcode_atts( array(
-		'website' => 'https://healthwatchbucks.co.uk/', // website for the signpost
+		'website' => get_site_url(), // website for the signpost
 	), $atts );
 
 	if ( empty( $content ) ) {
@@ -114,7 +114,7 @@ add_shortcode( 'signpost_website', 'hw_signpost_shortcode_signpost_website_objec
 
 function hw_signpost_shortcode_signpost_email_object( $atts, $content = null ) {
 	$a = shortcode_atts( array(
-		'email' => 'info@healthwatchbucks.co.uk', // email for the signpost
+		'email' => get_theme_mod( 'scaffold_org_email'), // email for the signpost
 	), $atts );
 
 	if ( empty( $content ) ) {
