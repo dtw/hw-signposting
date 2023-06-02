@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.3] - 2023-06-02
+## Changed
+- hard-code domain strings
+
 ## [1.5.2] - 2022-08-24
 ## Added
 - support for media selector
