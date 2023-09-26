@@ -12,8 +12,8 @@ This plugin was created to facilitate that process. It supports the creation of 
 
 Adds:
 
-* ```signposts``` post type
-* ```signpost_categories``` taxonomy - name, slug, category, description, icon (through the WordPress media selector)
+* `signposts` post type
+* `signpost_categories` taxonomy - name, slug, category, description, icon (through the WordPress media selector)
 * WordPress shortcodes for:
   * [signposts_menu] - outputs a graphical menu based on the taxonomy
   * [embed_signpost] - displays a single signpost (by post ID) with the option to hide the title e.g. [signpost_object signpost_id="49784" hide_title="false"]
@@ -31,4 +31,8 @@ Unless otherwise specified, all the plugin files, scripts and images are license
 
 ## Dependencies
 
-Some features require the ```scaffold-widget-tweaks``` plugin
+Some features require the `scaffold-widget-tweaks` plugin
+
+## Contributors
+
+Original code (circa 1.0.0) by jasoncharlesstuartking - former WordPress developer, now Google Ad Grant guru https://kingjason.co.uk/
