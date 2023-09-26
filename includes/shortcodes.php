@@ -192,7 +192,7 @@ add_shortcode( 'signpost_text', 'hw_signpost_shortcode_signpost_text_object' );
 
 /* Media object signpost
 
-This inserts the content of a signpost as a callout
+This inserts the content of a signpost as a callout [signpost_object signpost_id="49784" hide_title="false"]
 
 ------------------------ */
 
