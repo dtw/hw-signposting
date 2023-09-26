@@ -26,12 +26,18 @@ Adds:
     * [signpost_phone]
     * [signpost_text] (SMS)
 
+## Installation
+
+1. Upload the 'hw-signposting' folder to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Do not delete it.
+
 ## License
 Unless otherwise specified, all the plugin files, scripts and images are licensed under GNU General Public License version 2, see http://www.gnu.org/licenses/gpl-2.0.html.
 
 ## Dependencies
 
-Some features require the `scaffold-widget-tweaks` plugin
+Some features require the `scaffold-widget-tweaks` plugin (https://github.com/dtw/scaffold-widgets-tweaks)
 
 ## Contributors
 
