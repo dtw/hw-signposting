@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Healthwatch Signposting
-Version: 1.5.3
+Version: 1.5.4
 Description: Implements a custom post type for signposting on Healthwatch websites. <strong>DO NOT DELETE !</strong>
 Author: Phil Thiselton & Jason King
 License: GPL2
@@ -183,7 +183,6 @@ function addtoany_disable_sharing_on_my_custom_post_type() {
 }
 add_filter( 'addtoany_sharing_disabled', 'addtoany_disable_sharing_on_my_custom_post_type' );
 
-include("includes/taxonomy-icons.php");
 include("includes/shortcodes.php");
 
 /**
