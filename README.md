@@ -2,6 +2,8 @@
 
 Creates a custom post type for signposting content in Wordpress.
 
+For support please contact Phil Thiselton (dtw) at phil@healthwatchbucks.co.uk
+
 ## Description
 
 Local Healthwatch have a duty to "[provide] advice and information about access to local care services and about choices that may be made with respect to aspects of those services" (https://www.legislation.gov.uk/ukpga/2007/28/part/14/crossheading/local-involvement-networks)
@@ -11,7 +13,6 @@ This plugin was created to facilitate that process. It supports the creation of 
 ## Features
 
 Adds:
-
 * `signposts` post type
 * `signpost_categories` taxonomy - name, slug, category, description, icon (through the WordPress media selector)
 * WordPress shortcodes for:
