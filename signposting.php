@@ -183,7 +183,6 @@ function addtoany_disable_sharing_on_my_custom_post_type() {
 }
 add_filter( 'addtoany_sharing_disabled', 'addtoany_disable_sharing_on_my_custom_post_type' );
 
-include("includes/taxonomy-icons.php");
 include("includes/shortcodes.php");
 
 /**
