@@ -7,28 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ## [1.5.3] - 2023-06-02
-## Changed
+### Changed
 - hard-code domain strings
 
 ## [1.5.2] - 2022-08-24
-## Added
+### Added
 - support for media selector
 
 ## [1.5.1] - 2022-06-24
-## Added
+### Added
 - CSS and shortcodes from scaffold-widgets-tweaks
 
 ## [1.5] - 2022-06-09
-## Changed
+### Changed
 - The Great Function Rename 2022 (renamed functions in line with plugin name)
 - updated capabilities on taxonomy
 
 ## [1.4.3] - 2021-09-08
-## Changed
+### Changed
 - updated die message
 
 ## [1.4.2] - 2020-04-07
-## Changed
+### Changed
 - plugin description
 
 ## [1.4.1] - 2020-01-21
