@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.4] - 2023-09-27
+### Removed
+- taxonomy-icons.php - was an empty file
+
 ## [1.5.3] - 2023-06-02
 ### Changed
 - hard-code domain strings
