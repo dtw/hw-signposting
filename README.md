@@ -2,6 +2,10 @@
 
 Creates a custom post type for signposting content in Wordpress.
 
+For support please contact Phil Thiselton (dtw) at phil@healthwatchbucks.co.uk
+
+## Description
+
 Local Healthwatch have a duty to "[provide] advice and information about access to local care services and about choices that may be made with respect to aspects of those services" (https://www.legislation.gov.uk/ukpga/2007/28/part/14/crossheading/local-involvement-networks)
 
 This plugin was created to facilitate that process. It supports the creation of multiple "signposts", which quickly and simply describe a service or a source of information. The signpost content is configured to support responsive WordPress themes.
@@ -9,9 +13,8 @@ This plugin was created to facilitate that process. It supports the creation of 
 ## Features
 
 Adds:
-
-* ```signposts``` post type
-* ```signpost_categories``` taxonomy - name, slug, category, description, icon (through the WordPress media selector)
+* `signposts` post type
+* `signpost_categories` taxonomy - name, slug, category, description, icon (through the WordPress media selector)
 * WordPress shortcodes for:
   * [signposts_menu] - outputs a graphical menu based on the taxonomy
   * [embed_signpost] - displays a single signpost (by post ID) with the option to hide the title e.g. [signpost_object signpost_id="49784" hide_title="false"]
@@ -24,9 +27,19 @@ Adds:
     * [signpost_phone]
     * [signpost_text] (SMS)
 
+## Installation
+
+1. Upload the 'hw-signposting' folder to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Do not delete it.
+
 ## License
 Unless otherwise specified, all the plugin files, scripts and images are licensed under GNU General Public License version 2, see http://www.gnu.org/licenses/gpl-2.0.html.
 
 ## Dependencies
 
-Some features require the ```scaffold-widget-tweaks``` plugin
+Some features require the `scaffold-widget-tweaks` plugin (https://github.com/dtw/scaffold-widgets-tweaks)
+
+## Contributors
+
+Original code (circa 1.0.0) by jasoncharlesstuartking - former WordPress developer, now Google Ad Grant guru https://kingjason.co.uk/
