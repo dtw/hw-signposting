@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: Healthwatch Signposting
-Version: 1.5.4
+Version: 1.5.5
 Description: Implements a custom post type for signposting on Healthwatch websites. <strong>DO NOT DELETE !</strong>
 Author: Phil Thiselton & Jason King
 License: GPL2
@@ -109,18 +109,18 @@ function hw_signpost_modified_column_display( $column_name, $post_id ) {
 		global $post;
 	       	echo '<p class="mod-date">';
           // if last modification was over a year ago colour it red
-          if(date_format($modified_date_time->modify('+1 year'),'Y-m-d') < current_time('Y-m-d')) {
+          if(date_format($modified_date_time->modify('+1 year'),'Y-m-d') < current_datetime('Y-m-d')) {
             echo '<span style="color:red;">';
             if (get_the_modified_date() == get_the_date()) {
               // if the post has never been modified
               echo 'Never</span><br>';
             } else {
               // otherwise show a human readable time since edit
-              echo human_time_diff( strtotime(get_the_modified_date()), current_time( 'timestamp' ) ) . ' ago</span><br>';
+              echo human_time_diff( strtotime(get_the_modified_date()), current_datetime()->getTimestamp() ) . ' ago</span><br>';
             }
           } else {
             // last mod not more than a year ago so show a human readable time since edit
-            echo human_time_diff( strtotime(get_the_modified_date()), current_time( 'timestamp' ) ) . ' ago<br>';
+            echo human_time_diff( strtotime(get_the_modified_date()), current_datetime()->getTimestamp() ) . ' ago<br>';
           }
           // show modified date (with timestamp on hover)
           echo '<span style="text-decoration: dotted underline;" title="'.get_the_modified_date().' '.get_the_modified_time().'">';
